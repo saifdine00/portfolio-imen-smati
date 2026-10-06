@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imen SMATI — Portfolio académique</title>
+    <meta name="description"
+        content="Portfolio académique d'Imen SMATI — Docteur en Informatique, recherche en robustesse et certification des classifieurs de contours, enseignement supérieur.">
+    <style>
+        :root {
+            --navy: #082b63;
+            --blue: #3069a0;
+            --light: #eef4f9;
+            --paper: #ffffff;
+            --text: #242a31;
+            --muted: #667085;
+            --line: #dbe3ec;
+            --accent: #0b5aa6;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            color: var(--text);
+            background: #f7f9fb;
+            line-height: 1.6
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 22px
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy), #114b8f);
+            color: white;
+            padding: 70px 0 58px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 35px;
+            align-items: center
+        }
+
+        .kicker {
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            font-size: .82rem;
+            opacity: .82
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin: 12px 0
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 730px;
+            opacity: .95
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px
+        }
+
+        .badge {
+            border: 1px solid rgba(255, 255, 255, .35);
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: .9rem
+        }
+
+        .qr-card {
+            background: white;
+            color: var(--text);
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+            text-align: center
+        }
+
+        .qr-card img {
+            width: 180px;
+            height: 180px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid var(--line);
+            z-index: 5
+        }
+
+        .nav {
+            display: flex;
+            gap: 18px;
+            overflow: auto;
+            padding: 12px 0
+        }
+
+        .nav a {
+            white-space: nowrap;
+            font-size: .92rem;
+            font-weight: 600
+        }
+
+        section {
+            padding: 58px 0
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--navy);
+            margin: 0 0 8px
+        }
+
+        .section-sub {
+            color: var(--muted);
+            margin: 0 0 28px
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px
+        }
+
+        .card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 5px 18px rgba(22, 36, 55, .05)
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--navy)
+        }
+
+        .timeline {
+            position: relative;
+            margin: 10px 0 0 10px;
+            padding-left: 28px;
+            border-left: 3px solid var(--line)
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 30px
+        }
+
+        .event:before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--blue)
+        }
+
+        .year {
+            font-size: .9rem;
+            font-weight: 800;
+            color: var(--blue)
+        }
+
+        .pub {
+            margin-bottom: 22px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .pub:last-child {
+            border-bottom: 0;
+            margin-bottom: 0
+        }
+
+        .pub-title {
+            font-weight: 750
+        }
+
+        .meta {
+            font-size: .9rem;
+            color: var(--muted)
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .stat {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 22px;
+            text-align: center
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 2rem;
+            color: var(--navy)
+        }
+
+        .list-clean {
+            padding-left: 18px
+        }
+
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 35px 0;
+            text-align: center
+        }
+
+        .small {
+            font-size: .9rem;
+            color: #cbd7e7
+        }
+
+        @media(max-width:800px) {
+
+            .hero-grid,
+            .cards,
+            .grid3 {
+                grid-template-columns: 1fr
+            }
+
+            h1 {
+                font-size: 2.3rem
+            }
+
+            .qr-card {
+                max-width: 340px;
+                margin: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="kicker">Concours national — Maître Assistant en Informatique</div>
+                <h1>Imen SMATI</h1>
+                <p><strong>Docteur en Informatique</strong><br>
+                    Laboratoire CRISTAL — Pôle GRIFT — ENSI</p>
+                <p>Portfolio académique présentant mon parcours universitaire, mes travaux de recherche, mes
+                    publications scientifiques, mon expérience pédagogique et mes activités de formation et de
+                    rayonnement scientifique.</p>
+                <div class="badges">
+                    <span class="badge">Intelligence Artificielle</span>
+                    <span class="badge">Deep Learning</span>
+                    <span class="badge">Robustesse</span>
+                    <span class="badge">Certification</span>
+                    <span class="badge">Classifieurs de contours</span>
+                </div>
+            </div>
+            <div class="qr-card">
+                <h3>Accès rapide</h3>
+                <img id="qr" alt="QR code vers le portfolio">
+                <p id="qrText" class="small" style="color:#667085">QR code à régénérer après publication du site.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav">
+            <a href="#profil">Profil</a><a href="#cursus">Cursus</a><a href="#recherche">Recherche</a>
+            <a href="#publications">Publications</a><a href="#communications">Communications</a>
+            <a href="#enseignement">Enseignement</a><a href="#formations">Formations</a><a href="#bilan">Bilan</a>
+        </div>
+    </nav>
+
+    <section id="profil">
+        <div class="container">
+            <h2 class="section-title">Profil académique</h2>
+            <p class="section-sub">Une trajectoire construite autour de l’informatique, de l’IA et de l’enseignement
+                supérieur.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Positionnement scientifique</h3>
+                    <p>Mes travaux de recherche sont principalement consacrés à la <strong>robustesse des classifieurs
+                            de contours basés sur les réseaux de neurones profonds</strong>, avec une évolution vers la
+                        vérification et la certification multimodales.</p>
+                </div>
+                <div class="card">
+                    <h3>Positionnement pédagogique</h3>
+                    <p>J’exerce des activités d’enseignement à l’<strong>Institut Supérieur d’Informatique et de Gestion
+                            de Kairouan (ISIGK)</strong> depuis septembre 2022, dans des cours, TD et TP couvrant
+                        plusieurs domaines de l’informatique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursus" style="background:var(--light)">
+        <div class="container">
+            <h2 class="section-title">Cursus universitaire</h2>
+            <p class="section-sub">Progression de la statistique et analyse de l’information vers l’informatique et
+                l’intelligence artificielle.</p>
+            <div class="timeline">
+                <div class="event">
+                    <div class="year">Diplôme National d’Ingénieur</div>
+                    <h3>Statistique et Analyse de l’Information</h3>
+                    <p>Projet : <em>Prédiction du Churn des clients Ooredoo</em>. Mention Bien.</p>
+                </div>
+                <div class="event">
+                    <div class="year">Mastère en Informatique</div>
+                    <h3>Robustesse des Classifieurs de Contours basés sur les Réseaux de Neurones Profonds</h3>
+                    <p>Direction : Pr. Faouzi Ghorbel — ENSI / CRISTAL / Pôle GRIFT. Mention Très Bien.</p>
+                </div>
+                <div class="event">
+                    <div class="year">Doctorat en Informatique</div>
+                    <h3>Robustesse des Classifieurs Contours Basés sur les Réseaux de Neurones Profonds</h3>
+                    <p>Direction : Pr. Faouzi Ghorbel — ENSI / CRISTAL / Pôle GRIFT. Mention Très Honorable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recherche">
+        <div class="container">
+            <h2 class="section-title">Activités scientifiques</h2>
+            <p class="section-sub">De l’étude de la robustesse des classifieurs de contours à la vérification
+                multimodale.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Problématique</h3>
+                    <p>Comment évaluer et renforcer la fiabilité des classifieurs profonds lorsqu’ils sont confrontés à
+                        des perturbations et à des attaques ?</p>
+                </div>
+                <div class="card">
+                    <h3>Approche</h3>
+                    <p>Étudier la robustesse des classifieurs de contours et développer des mécanismes d’évaluation et
+                        de certification adaptés aux formes et aux informations visuelles.</p>
+                </div>
+                <div class="card">
+                    <h3>AI3D</h3>
+                    <p><strong>AI3D : Multimodal Verification System against Projective Attacks for Deep Learning
+                            Classifiers</strong>. L’approche combine l’information image et l’information contour dans
+                        un cadre de vérification multimodale.</p>
+                </div>
+                <div class="card">
+                    <h3>Contribution scientifique</h3>
+                    <p>Une ligne de recherche cohérente reliant classification de formes, Deep Learning, robustesse,
+                        certification et vérification multimodale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" style="background:var(--light)">
+        <div class="container">
+            <h2 class="section-title">Publications scientifiques</h2>
+            <p class="section-sub">Articles de revues internationales mentionnés dans le rapport scientifique.</p>
+            <div class="card">
+                <div class="pub">
+                    <div class="pub-title">AI3D: Multimodal Verification System against Projective Attacks for Deep
+                        Learning Classifiers</div>
+                    <div class="meta">Pattern Recognition — Q1 — IF ≈ 8.0 (décembre 2025)</div>
+                    <p>Imen Smati, Rania Khalsi, Faouzi Ghorbel, Mallek Mziou Sallami.</p>
+                </div>
+                <div class="pub">
+                    <div class="pub-title">DeepGCSS: a robust and explainable contour classifier providing Generalized
+                        Curvature Scale Space features</div>
+                    <div class="meta">Neural Computing and Applications — Q1 — IF ≈ 6.0 (2023)</div>
+                    <p>Mallek Mziou Sallami, Rania Khalsi, Imen Smati, Slim Mhiri, Faouzi Ghorbel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="communications">
+        <div class="container">
+            <h2 class="section-title">Communications et chapitre d’ouvrage</h2>
+            <div class="card">
+                <ul class="list-clean">
+                    <li><strong>IEEE ICIP 2022</strong> — classe A : <em>A novel system for deep contour classifiers
+                            certification under filtering attacks.</em></li>
+                    <li><strong>ICAART 2022</strong> : <em>ContourVerifier: A Novel System for the Robustness Evaluation
+                            of Deep Contour Classifiers.</em></li>
+                    <li><strong>TAIMA 2023</strong> : <em>Double Certification des réseaux de neurones profonds contre
+                            les attaques convolutives : Image et Contour.</em></li>
+                    <li><strong>TAIMA 2023</strong> : <em>An example of a deep classifier for contour shapes inspired by
+                            the almost complete analytical descriptor known by the GCSS.</em></li>
+                    <li><strong>Springer — ICAART 2022, Q2</strong> : <em>Integrative System of Deep Classifiers
+                            Certification: case of Convolutional Attacks.</em></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="enseignement" style="background:var(--light)">
+        <div class="container">
+            <h2 class="section-title">Activités pédagogiques</h2>
+            <p class="section-sub">Enseignement à l’ISIGK depuis septembre 2022.</p>
+            <div class="grid3">
+                <div class="card">
+                    <h3>Cours</h3>
+                    <ul class="list-clean">
+                        <li>Système d’exploitation 1</li>
+                        <li>Optimisation et processus de décision</li>
+                        <li>Conception TB et Scoring</li>
+                        <li>Stratégie de résolution de problèmes</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>TD</h3>
+                    <ul class="list-clean">
+                        <li>Graphes et optimisation</li>
+                        <li>Algorithmique et structures de données II</li>
+                        <li>Fondements de l’IA</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>TP</h3>
+                    <ul class="list-clean">
+                        <li>Machine Learning</li>
+                        <li>Langages de programmation évolués</li>
+                        <li>Programmation Python</li>
+                        <li>Algorithmique et structures de données II</li>
+                        <li>Ingénierie des Bases de Données</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formations">
+        <div class="container">
+            <h2 class="section-title">Formation continue et rayonnement</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Formations</h3>
+                    <ul class="list-clean">
+                        <li>AUF — Initiation à la pédagogie universitaire (18 h)</li>
+                        <li>NVIDIA DLI — Fundamentals of Deep Learning</li>
+                        <li>TAIMA 2022 — Machine Learning</li>
+                        <li>TAIMA 2023 — Imagerie médicale</li>
+                        <li>ICIP 2022 — Détection des DeepFakes</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Manifestations & responsabilités</h3>
+                    <ul class="list-clean">
+                        <li>PHARES 2025</li>
+                        <li>MICMEF 2025</li>
+                        <li>TAIMA 2022 / TAIMA 2023</li>
+                        <li>IEEE ICIP 2022</li>
+                        <li>Comité d’organisation TAIMA 2023</li>
+                        <li>Student Volunteer — IEEE ICIP 2022</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bilan" style="background:var(--light)">
+        <div class="container">
+            <h2 class="section-title">Bilan et perspectives</h2>
+            <div class="grid3">
+                <div class="stat"><strong>2</strong>articles en revues internationales Q1</div>
+                <div class="stat"><strong>4</strong>communications internationales</div>
+                <div class="stat"><strong>1</strong>chapitre d’ouvrage Springer Q2</div>
+            </div>
+            <div class="card" style="margin-top:22px">
+                <h3>Perspectives</h3>
+                <p>Poursuivre les travaux sur la robustesse et la certification des modèles d’IA, développer de
+                    nouvelles contributions autour de la vérification multimodale et renforcer les enseignements
+                    pratiques en IA, Machine Learning, programmation et algorithmique.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <strong>Imen SMATI</strong><br>
+            <span class="small">Docteur en Informatique — Laboratoire CRISTAL, Pôle GRIFT, ENSI</span>
+            <p class="small">Portfolio préparé pour le concours de recrutement au grade de Maître Assistant en
+                Informatique.</p>
+        </div>
+    </footer>
+
+    <script>
+        const portfolioUrl = "REMPLACEZ_PAR_L_URL_PUBLIÉE";
+        document.getElementById("qr").src =
+            "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" +
+            encodeURIComponent(portfolioUrl);
+        document.getElementById("qrText").textContent =
+            portfolioUrl === "REMPLACEZ_PAR_L_URL_PUBLIÉE"
+                ? "Après publication, remplacez l’URL dans ce fichier et régénérez le QR code."
+                : portfolioUrl;
+    </script>
+</body>
+
+</html>
