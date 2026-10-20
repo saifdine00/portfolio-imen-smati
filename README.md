@@ -20,7 +20,8 @@ Application web moderne développée avec **Next.js (App Router)** et **TypeScri
   - **5 Travaux Pratiques (TP)** : Machine Learning, Programmation Python, Langages évolués, Algorithmique II, Ingénierie des Bases de Données.
 - **Formations & Rayonnement** : AUF (Pédagogie universitaire 18h), NVIDIA DLI, TAIMA, IEEE ICIP 2022, Comité d'organisation TAIMA 2023, Volontariat international ICIP 2022, PHARES 2025, MICMEF 2025.
 - **Bilan Chiffré & Perspectives** : Compteurs d'impact et vision recherche/pédagogie à moyen et long terme.
-- **QR Code Dynamique Intégré** : Génération automatique du QR code à partir de l'URL réelle du site en ligne (sur Vercel), bouton de copie de lien et téléchargement direct en PNG HD.
+- **Portrait de Profil** : Photo officielle `imensmati.jpg` affichée en carte dans le Hero (format portrait logique ~180 x 260 px, optimisée en `public/`).
+- **QR Code Dynamique Intégré** : QR code secondaire généré automatiquement à partir de l'URL réelle du site en ligne (sur Vercel), bouton de copie de lien et téléchargement direct en PNG HD.
 - **Mode Sombre / Mode Clair** : Thème académique élégant avec bascule en 1 clic.
 - **Export Dossier PDF / Impression** : Feuille de style dédiée `@media print` pour exporter un dossier de candidature propre et officiel pour le jury.
 

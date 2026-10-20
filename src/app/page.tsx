@@ -22,7 +22,7 @@ export default function Home() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section with Live Dynamic QR Code */}
+      {/* Hero Section with Profile Photo & QR Code */}
       <Hero />
 
       {/* Academic Profile */}

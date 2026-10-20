@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { PORTFOLIO_DATA } from '@/data/portfolioData';
-import DynamicQR from './DynamicQR';
+import ProfileCard from './ProfileCard';
 import { Award, BookOpen, GraduationCap, Sparkles, School, ChevronDown, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
@@ -198,9 +198,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Dynamic Live QR Code Card */}
+          {/* Right Column: Profile Photo Card (QR code secondaire) */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <DynamicQR />
+            <ProfileCard />
           </div>
         </div>
       </div>
