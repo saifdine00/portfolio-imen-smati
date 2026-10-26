@@ -109,21 +109,9 @@ export default function ProfileCard({ compact = false }: ProfileCardProps) {
         justifyContent: 'space-between',
         marginBottom: '12px'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: '700', color: '#1e3a8a' }}>
-          <User size={18} color="#2563eb" />
-          <span>Imen SMATI</span>
-        </div>
-        <span style={{
-          fontSize: '0.72rem',
-          fontWeight: '700',
-          padding: '2px 8px',
-          borderRadius: '999px',
-          background: '#ecfdf5',
-          color: '#047857',
-          border: '1px solid #a7f3d0'
-        }}>
-          Docteure
-        </span>
+        
+      
+        
       </div>
 
       {/* Profile Photo */}

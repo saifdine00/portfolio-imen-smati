@@ -113,17 +113,7 @@ export default function Hero() {
                 <span style={{ fontSize: '1.2rem', fontWeight: '800', color: '#ffffff' }}>
                   {identity.title}
                 </span>
-                <span style={{
-                  fontSize: '0.72rem',
-                  padding: '2px 8px',
-                  borderRadius: '6px',
-                  background: 'rgba(16, 185, 129, 0.2)',
-                  color: '#34d399',
-                  border: '1px solid rgba(16, 185, 129, 0.4)',
-                  fontWeight: '700'
-                }}>
-                  Thèse soutenue
-                </span>
+                
               </div>
               <div style={{ fontSize: '0.95rem', color: '#93c5fd', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <School size={16} color="#93c5fd" />

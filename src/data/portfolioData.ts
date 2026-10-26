@@ -49,14 +49,13 @@ export interface TrainingItem {
 export const PORTFOLIO_DATA = {
   identity: {
     fullName: "Imen SMATI",
-    title: "Docteur en Informatique",
-    subtitle: "Concours national — Maître Assistant en Informatique",
+    title: "Docteur en Science  Informatique",
     currentPosition: "Enseignante universitaire à l'ISIGK (depuis sept. 2022)",
     affiliations: [
       "Laboratoire CRISTAL — Pôle GRIFT — ENSI",
       "Institut Supérieur d'Informatique et de Gestion de Kairouan (ISIGK)"
     ],
-    bio: "Portfolio académique présentant mon parcours universitaire, mes travaux de recherche en Intelligence Artificielle et Deep Learning (robustesse, certification et vérification multimodale des classifieurs), mes publications scientifiques de rang international, mon expérience pédagogique à l'ISIGK ainsi que mes activités de formation continue et de rayonnement scientifique.",
+    bio: "Ph.D. in Computer Science & Data Science Engineer with solid higher education teaching experience at ISIGK. Specialized in AI and Deep Learning, with international publications in deep model verification and robustness.",
     email: "imen.smati@ensi-uma.tn",
     researchGate: "https://www.researchgate.net",
     googleScholar: "https://scholar.google.com",
