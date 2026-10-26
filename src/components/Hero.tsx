@@ -60,26 +60,7 @@ export default function Hero() {
           {/* Left Column: Academic Credentials */}
           <div>
             {/* Kicker badge */}
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '6px 14px',
-                borderRadius: '999px',
-                background: 'rgba(59, 130, 246, 0.18)',
-                border: '1px solid rgba(96, 165, 250, 0.35)',
-                color: '#93c5fd',
-                fontSize: '0.82rem',
-                fontWeight: '700',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                marginBottom: '16px'
-              }}
-            >
-              <Award size={16} color="#60a5fa" />
-              <span>{identity.subtitle}</span>
-            </div>
+            
 
             {/* Name */}
             <h1

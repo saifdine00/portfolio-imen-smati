@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import AcademicProfile from '@/components/AcademicProfile';
 import TimelineSection from '@/components/TimelineSection';
-import ResearchSection from '@/components/ResearchSection';
+// import ResearchSection from '@/components/ResearchSection';
 import PublicationsSection from '@/components/PublicationsSection';
 import CommunicationsSection from '@/components/CommunicationsSection';
 import TeachingSection from '@/components/TeachingSection';
@@ -32,7 +32,7 @@ export default function Home() {
       <TimelineSection />
 
       {/* Scientific Research & AI3D */}
-      <ResearchSection />
+      {/* <ResearchSection /> */}
 
       {/* Q1 Publications */}
       <PublicationsSection />
