@@ -150,27 +150,7 @@ export default function Navbar() {
         {/* Right controls: Print, Theme, Mobile toggle */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           {/* Print CV / Dossier button */}
-          <button
-            onClick={handlePrint}
-            title="Imprimer ou enregistrer en PDF le dossier académique"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '8px 14px',
-              borderRadius: 'var(--radius-md)',
-              background: 'var(--bg-glass)',
-              border: '1px solid var(--border-medium)',
-              color: 'var(--text-secondary)',
-              fontSize: '0.82rem',
-              fontWeight: '600',
-              transition: 'all 0.2s ease'
-            }}
-            className="print-btn-nav"
-          >
-            <Printer size={16} />
-            <span className="print-btn-text">Imprimer Dossier</span>
-          </button>
+          
 
           {/* Theme switcher */}
           <button
